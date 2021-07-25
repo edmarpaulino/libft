@@ -1,5 +1,6 @@
 NAME = libft.a
-SOURCE_FILES = ft_isalpha.c
+SOURCE_FILES = ft_isalpha.c \
+               ft_isdigit.c
 HEADER_DIR = .
 OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 CC =clang 
