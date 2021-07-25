@@ -22,7 +22,7 @@ int	main(void)
 		++index;
 	}
 	if (index == 13)
-		printf("\033[92mTest %2.i - OK \033[0m\n", 1;
+		printf("\033[92mTest %2.i - OK \033[0m\n", 1);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
 
