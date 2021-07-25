@@ -22,9 +22,9 @@ int	main(void)
 		++index;
 	}
 	if (index == 13)
-		printf("\033[92mTest %2.i - OK \033[0m\n", 3);
+		printf("\033[92mTest %2.i - OK \033[0m\n", 1;
 	else
-		printf("\033[91mTest %2.i - KO \033[0m\n", 3);
+		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
 
 	index =0;
 	bzero(str2, 1);
@@ -36,9 +36,9 @@ int	main(void)
 		++index;
 	}
 	if (index == 1)
-		printf("\033[92mTest %2.i - OK \033[0m\n", 3);
+		printf("\033[92mTest %2.i - OK \033[0m\n", 2);
 	else
-		printf("\033[91mTest %2.i - KO \033[0m\n", 3);
+		printf("\033[91mTest %2.i - KO \033[0m\n", 2);
 	
 	index =0;
 	bzero(arr0, 4 * sizeof(*arr0));
