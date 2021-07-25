@@ -1,17 +1,9 @@
 NAME = libft.a
-SOURCE_FILES = ft_isalpha.c \
-			   ft_isdigit.c \
-			   ft_isalnum.c \
-			   ft_isascii.c \
-			   ft_isprint.c \
-			   ft_strlen.c \
-			   ft_memset.c \
-			   ft_bzero.c \
-			   ft_memcpy.c
+SOURCE_FILES = ft_isalpha.c
 HEADER_DIR = .
 OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 CC =clang 
-FLAGS = -Wall -Wextra -Werror -c
+FLAGS = -Wall -Wextra -Werror
 
 
 .DEFAULT_GOAL := all
@@ -19,7 +11,7 @@ FLAGS = -Wall -Wextra -Werror -c
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(FLAGS) $< -o $@ -I $(HEADER_DIR)
+	$(CC) $(FLAGS) -c $< -o $@ -I $(HEADER_DIR)
 
 $(NAME): $(OBJECT_FILES)
 	ar cr $@ $(OBJECT_FILES)
