@@ -13,7 +13,8 @@ SOURCE_FILES = ft_isalpha.c \
                ft_strlcat.c \
                ft_toupper.c \
                ft_tolower.c \
-               ft_strchr.c
+               ft_strchr.c \
+               ft_strrchr.c
 HEADER_DIR = .
 OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 CC =clang 
