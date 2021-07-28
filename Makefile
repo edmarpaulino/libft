@@ -18,7 +18,8 @@ SOURCE_FILES = ft_isalpha.c \
                ft_strncmp.c \
                ft_memchr.c \
                ft_memcmp.c \
-               ft_strnstr.c
+               ft_strnstr.c \
+               ft_atoi.c
 HEADER_DIR = .
 OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 CC =clang 

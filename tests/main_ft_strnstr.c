@@ -15,7 +15,7 @@ int	main(void)
 
 	ret_strnstr = strnstr(str0, str1, 5);
 	ret_ft_strnstr = ft_strnstr(str0, str1, 5);
-	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
+//	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
 	if (ret_strnstr == ret_ft_strnstr)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 1);
 	else
@@ -23,7 +23,7 @@ int	main(void)
 
 	ret_strnstr = strnstr(str0, str1, 13);
 	ret_ft_strnstr = ft_strnstr(str0, str1, 13);
-	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
+//	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
 	if (ret_strnstr == ret_ft_strnstr)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 2);
 	else
@@ -31,7 +31,7 @@ int	main(void)
 
 	ret_strnstr = strnstr(str2, str3, 0);
 	ret_ft_strnstr = ft_strnstr(str2, str3, 0);
-	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
+//	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
 	if (ret_strnstr == ret_ft_strnstr)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 3);
 	else
@@ -39,7 +39,7 @@ int	main(void)
 
 	ret_strnstr = strnstr(str2, str3, 100);
 	ret_ft_strnstr = ft_strnstr(str2, str3, 100);
-	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
+//	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
 	if (ret_strnstr == ret_ft_strnstr)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 4);
 	else
@@ -47,7 +47,7 @@ int	main(void)
 
 	ret_strnstr = strnstr(str0, str1, -5);
 	ret_ft_strnstr = ft_strnstr(str0, str1, -5);
-	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
+//	printf("ret_strnstr -> %s\nret_ft_strncmp -> %s\n", ret_strnstr, ret_ft_strnstr);
 	if (ret_strnstr == ret_ft_strnstr)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 5);
 	else
