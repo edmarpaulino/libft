@@ -14,5 +14,7 @@ int	ft_memcmp(const void	*s1, const void	*s2, size_t	n)
 		++uc_s1;
 		++uc_s2;
 	}
+	if (n == 0)
+		return (0);
 	return (*uc_s1 - *uc_s2);
 }
