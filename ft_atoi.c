@@ -16,7 +16,7 @@ int	ft_atoi(const char	*str)
 	num = 0;
 	while (ft_iswhitespace(*str))
 		++str;
-	if(*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			sign *= -1;
