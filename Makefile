@@ -20,7 +20,8 @@ SOURCE_FILES = ft_isalpha.c \
                ft_memcmp.c \
                ft_strnstr.c \
                ft_atoi.c \
-               ft_calloc.c
+               ft_calloc.c \
+               ft_strdup.c
 HEADER_DIR = .
 OBJECT_FILES = $(SOURCE_FILES:.c=.o)
 CC =clang 
