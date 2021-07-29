@@ -1,5 +1,5 @@
 NAME = libft.a
-SOURCE_FILES = ft_isalpha.c \
+SRC = ft_isalpha.c \
                ft_isdigit.c \
                ft_isalnum.c \
                ft_isascii.c \
@@ -22,25 +22,25 @@ SOURCE_FILES = ft_isalpha.c \
                ft_atoi.c \
                ft_calloc.c \
                ft_strdup.c \
-               ft_substr.c
+               ft_substr.c \
+               ft_strjoin.c
 HEADER_DIR = .
-OBJECT_FILES = $(SOURCE_FILES:.c=.o)
-CC =clang 
-FLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:.c=.o)
+CC = clang
+CFLAGS = -Wall -Wextra -Werror
 
-
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := all 
 
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@ -I $(HEADER_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER_DIR)
 
-$(NAME): $(OBJECT_FILES)
-	ar cr $@ $(OBJECT_FILES)
+$(NAME): $(OBJ)
+	ar cr $@ $(OBJ)
 
 clean:
-	rm -f $(OBJECT_FILES)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
