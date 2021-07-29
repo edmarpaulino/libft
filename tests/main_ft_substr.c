@@ -26,7 +26,7 @@ int	main(void)
 		printf("\033[91mTest %2.i - KO \033[0m\n", 2);
 	free(ret_ft_substr);
 
-	ret_ft_substr = ft_substr(str, 13, 8);
+	ret_ft_substr = ft_substr(str, 12, 8);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
 	if (ret_ft_substr == NULL)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 3);
