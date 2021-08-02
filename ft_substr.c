@@ -3,16 +3,17 @@
 char	*ft_substr(const char	*s, unsigned int	start, size_t	len)
 {
 	char	*sub;
-	size_t	sub_len;
+	size_t	s_len;
 
-	if (s[start] == '\0' || len == 0)
+	if (!s)
 		return (NULL);
-	sub_len = ft_strlen(&s[start]);
-	if (len > sub_len)
-		len = (sub_len + 1);
-	sub = (char *)ft_calloc(len, sizeof(*sub));
-	if (sub == NULL)
+	s_len = ft_strlen(s);
+	if ((start + len) > s_len)
+		len = (s_len - start);
+	++len;
+	sub = (char *)malloc(len * sizeof(*sub));
+	if (!sub)
 		return (NULL);
-	ft_strlcpy(sub, &s[start], len);
+	ft_strlcpy(sub, (s + start), len);
 	return (sub);
 }

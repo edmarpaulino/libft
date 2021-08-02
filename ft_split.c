@@ -31,8 +31,8 @@ static char	*ft_splitcpy(char const	*src, char	c)
 
 	len = (ft_splitlen(src, c) + 1);
 	dst = (char *)malloc(len * sizeof(*dst));
-	if (dst == 0)
-		return (0);
+	if (!dst)
+		return (NULL);
 	ft_strlcpy(dst, src, len);
 	return (dst);
 }
@@ -44,20 +44,16 @@ static char	**ft_get_split(char	**split, char	*str, char c, size_t count)
 	index = 0;
 	while (index < count)
 	{
-		if (index == 0)
-			split[index] = ft_splitcpy(str, c);
-		else
-		{
+		if (index)
 			str = ft_strchr(str, c);
-			while (*str == c)
-				++str;
-			split[index] = ft_splitcpy(str, c);
-		}
-		if (split[index] == 0)
+		while (*str == c)
+			++str;
+		split[index] = ft_splitcpy(str, c);
+		if (!split[index])
 		{
-			while (index-- > 0)
+			while (index--)
 				free(split[index]);
-			return (0);
+			return (NULL);
 		}
 		++index;
 	}
@@ -70,11 +66,11 @@ char	**ft_split(char const	*s, char	c)
 	char	**split;
 	size_t	count;
 
-	if (s == 0)
-		return (0);
+	if (!s)
+		return (NULL);
 	count = ft_count_split(s, c);
 	split = (char **)malloc((count + 1) * sizeof(*split));
-	if (split == 0)
-		return (0);
+	if (!split)
+		return (NULL);
 	return (ft_get_split(split, (char *)s, c, count));
 }

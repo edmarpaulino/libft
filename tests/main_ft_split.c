@@ -5,11 +5,11 @@
 
 int	main(void)
 {
-	char	str[] = "abc    .         def ghi jkl";
-	char	str_null[4] = "";
+//	char	str[] = "abc    .         def ghi jkl";
+//	char	str_null[4] = "";
 	char	**ret_str;
 	size_t	index;
-
+/*
 	ret_str = ft_split(str, ' ');
 	index = 0;
 	while (ret_str[index])
@@ -61,6 +61,17 @@ int	main(void)
 	free(ret_str);
 
 	ret_str = ft_split(str_null, 'y');
+	index = 0;
+	while (ret_str[index])
+	{
+		printf("%s\n", ret_str[index]);
+		++index;
+	}
+	printf("-----------------------\n");
+	free(ret_str);
+*/
+
+	ret_str = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
 	index = 0;
 	while (ret_str[index])
 	{
