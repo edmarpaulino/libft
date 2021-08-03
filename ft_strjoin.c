@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/03 15:24:10 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/08/03 15:26:34 by edpaulin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const	*s1, char const	*s2)
@@ -11,7 +22,7 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	new_str = (char *)ft_calloc((s1_len + s2_len + 1), sizeof(*new_str));
+	new_str = (char *)malloc((s1_len + s2_len + 1) * sizeof(*new_str));
 	if (!new_str)
 		return (NULL);
 	ft_strlcpy(new_str, s1, (s1_len + 1));

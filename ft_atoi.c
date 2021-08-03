@@ -1,19 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/03 15:02:51 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/08/03 15:09:20 by edpaulin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_iswhitespace(int	c)
 {
-	if ((c >= 9 && c <= 13) || c == 32 )
-		return (FT_SUCCESS);
-	return (FT_FAILED);
+	return ((c >= 9 && c <= 13) || c == 32 );
 }
 
 int	ft_atoi(const char	*str)
 {
-	signed char	sign;
-	int			num;
+	signed char		sign;
+	unsigned int	nbr;
 
 	sign = 1;
-	num = 0;
+	nbr = 0;
 	while (ft_iswhitespace(*str))
 		++str;
 	if (*str == '-' || *str == '+')
@@ -23,6 +33,6 @@ int	ft_atoi(const char	*str)
 		++str;
 	}
 	while (ft_isdigit(*str))
-		num = (num * 10) + (*(str++) - '0');
-	return (num * sign);
+		nbr = (nbr * 10) + (*(str++) - '0');
+	return (nbr * sign);
 }
