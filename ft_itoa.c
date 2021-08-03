@@ -48,19 +48,9 @@ char	*ft_itoa(int	n)
 
 	str = 0;
 	if (n == -2147483648)
-	{
-		str = (char *)malloc(12 * sizeof(*str));
-		if (str == 0)
-			return (0);
-		ft_strlcpy(str, "-2147483648", 12);
-	}
+		str = ft_strdup("-2147483648");
 	else if (n == 0)
-	{
-		str = (char *)malloc(2 * sizeof(*str));
-		if (str == 0)
-			return (0);
-		ft_strlcpy(str, "0", 2);
-	}
+		str = ft_strdup("0");
 	else
 		str = ft_convert(n, str);
 	return (str);

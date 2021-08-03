@@ -43,7 +43,9 @@ CC = clang
 
 CFLAGS = -Wall -Wextra -Werror
 
-.DEFAULT_GOAL := all 
+MAIN = main.c
+
+.DEFAULT_GOAL = all
 
 all: $(NAME)
 
@@ -57,7 +59,17 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) *.out
 
 re: fclean all
 
+exec: all
+	$(CC) $(CFLAGS) $(MAIN) $(NAME)
+	./a.out
+
+so: $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+soclean: fclean
+	rm -f libft.so
