@@ -70,8 +70,26 @@ int	main(void)
 	printf("-----------------------\n");
 	free(ret_str);
 */
+	ret_str = ft_split("1-2-3-4-5-6-7-8--8-8--8-4------4--4", '-');
+	index = 0;
+	while (ret_str[index])
+	{
+		printf("%s\n", ret_str[index]);
+		++index;
+	}
+	printf("-----------------------\n");
+	free(ret_str);
+	/*
+	if (1)
+		printf("\033[92mTest %2.i - OK \033[0m\n", 1);
+	else
+		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
+	free(ret_str);
+	*/
 
-	ret_str = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
+	char *str = "--1-2-3-4-5-6-7-8--8-8--8-4------4--4";
+	char sep = '-';
+ret_str = ft_split(str, sep);
 	index = 0;
 	while (ret_str[index])
 	{
