@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 15:02:51 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/03 15:09:20 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 13:36:31 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_iswhitespace(int	c)
-{
-	return ((c >= 9 && c <= 13) || c == 32 );
-}
+/*
+*	DESCRIPTION
+*	The atoi() function converts the initial portion of the string pointed
+*	to by str to int representation.
+*/
 
 int	ft_atoi(const char	*str)
 {
@@ -24,12 +25,12 @@ int	ft_atoi(const char	*str)
 
 	sign = 1;
 	nbr = 0;
-	while (ft_iswhitespace(*str))
+	while ((*str >= 9 && *str <= 13) || *str == 32)
 		++str;
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign *= -1;
+			sign = -1;
 		++str;
 	}
 	while (ft_isdigit(*str))

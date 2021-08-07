@@ -5,7 +5,7 @@ void	del(void	*content)
 {
 	if (content)
 	{
-		content = 0;
+		content = NULL;
 		free(content);
 	}
 }
@@ -21,10 +21,8 @@ int	main(void)
 	elem = ft_lstnew(str1);
 	elem->next = ft_lstnew(str2);
 	elem->next->next = ft_lstnew(str3);
-	printf("%d\n", ft_lstsize(elem));
 	ft_lstdelone(elem->next->next, del);
-	printf("%d\n", ft_lstsize(elem));
-	if (ft_lstsize(elem) == 2)
+	if (!elem->next->next->content)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 1);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
@@ -40,8 +38,7 @@ int	main(void)
 	elem->next->next->next->next->next->next->next->next = ft_lstnew(str3);
 	elem->next->next->next->next->next->next->next->next->next = ft_lstnew(str4);
 	ft_lstdelone(elem->next->next, del);
-	printf("%d\n", ft_lstsize(elem));
-	if (ft_lstsize(elem) != 10)
+	if (!elem->next->next->content)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 2);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 2);
@@ -55,10 +52,10 @@ int	main(void)
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 3);
 
-	elem = ft_lstnew(NULL);
+	elem = ft_lstnew(0);
 	ft_lstdelone(elem, del);
-	printf("%d\n", ft_lstsize(elem));
-	if (ft_lstsize(elem) != 1)
+	printf("%s\n", (char *)elem->content);
+	if (!elem->content)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 4);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 4);
@@ -67,7 +64,7 @@ int	main(void)
 	elem->next = ft_lstnew(str2);
 	elem->next->next = ft_lstnew(str3);
 	ft_lstdelone(elem->next->next, NULL);
-	if (ft_lstsize(elem) == 3)
+	if (elem->next->next->content)
 		printf("\033[92mTest %2.i - OK \033[0m\n", 5);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 5);

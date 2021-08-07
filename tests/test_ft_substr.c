@@ -18,7 +18,7 @@ int	main(void)
 		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
 	free(ret_ft_substr);
 
-	ret_ft_substr = ft_substr(str, 0, 6);
+	ret_ft_substr = ft_substr(str, 0, 5);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
 	if (!strcmp("Hello", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 2);
@@ -28,7 +28,7 @@ int	main(void)
 
 	ret_ft_substr = ft_substr(str, 12, 8);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
-	if (ret_ft_substr == NULL)
+	if (!strcmp("", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 3);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 3);
@@ -36,7 +36,7 @@ int	main(void)
 
 	ret_ft_substr = ft_substr(str, 12, 0);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
-	if (ret_ft_substr == NULL)
+	if (!strcmp("", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 4);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 4);
@@ -44,7 +44,7 @@ int	main(void)
 
 	ret_ft_substr = ft_substr(str, 0, 0);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
-	if (ret_ft_substr == NULL)
+	if (!strcmp("", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 5);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 5);
@@ -52,13 +52,13 @@ int	main(void)
 
 	ret_ft_substr = ft_substr(str_null, 0, 4);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
-	if (ret_ft_substr == NULL)
+	if (!strcmp("", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 6);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 6);
 	free(ret_ft_substr);
 
-	ret_ft_substr = ft_substr(str, 0, 12);
+	ret_ft_substr = ft_substr(str, 0, 11);
 //	printf("ret_ft_substr -> %s\n", ret_ft_substr);
 	if (!strcmp("Hello world", ret_ft_substr))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 7);

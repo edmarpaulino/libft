@@ -33,7 +33,7 @@ int	main(void)
 
 	ret_ft_strjoin = ft_strjoin("", "");
 //	printf("ret_ft_strjoin -> %s\n", ret_ft_strjoin);
-	if (ret_ft_strjoin == NULL)
+	if (!strcmp("", ret_ft_strjoin))
 		printf("\033[92mTest %2.i - OK \033[0m\n", 4);
 	else
 		printf("\033[91mTest %2.i - KO \033[0m\n", 4);

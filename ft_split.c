@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 15:49:37 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/03 15:49:38 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 13:33:37 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+*	DESCRIPTION
+*	Allocates (with malloc(3)) and returns an array of strings obtained by
+*	splitting ’s’ using the character ’c’ as a delimiter. The array must be
+*	ended by a NULL pointer.
+*
+*	RETURN VALUES
+*	The array of new strings resulting from the split.
+*	NULL if the allocation fails.
+*/
 
 static size_t	ft_count_split(char const	*s, char	c)
 {

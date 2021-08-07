@@ -3,26 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 15:44:58 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/05 19:44:28 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 14:22:25 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+*	DESCRIPTION
+*	Iterates the list ’lst’ and applies the function ’f’ to the content of each
+*	element.
+*/
+
 void	ft_lstiter(t_list	*lst, void	(*f)(void *))
 {
-	t_list	*node;
+	t_list	*elem;
 
-	if (lst && f)
+	if (lst && (*f))
 	{
-		node = lst;
-		while (node)
+		elem = lst;
+		while (elem)
 		{
-			f(node->content);
-			node = node->next;
+			(*f)(elem->content);
+			elem = elem->next;
 		}
 	}
 }

@@ -1,9 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/07 09:42:29 by edpaulin          #+#    #+#             */
+/*   Updated: 2021/08/07 13:51:30 by edpaulin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 # define FT_SUCCESS 1
 # define FT_FAILED 0
 # include <stdlib.h>
 # include <unistd.h>
+
+/*
+*	content:	The data contained in the element. The void * allows to store 
+*				any	kind of data.
+*
+*	next:		The next element’s address or NULL if it’s the last element.
+*/
 
 typedef struct s_list
 {

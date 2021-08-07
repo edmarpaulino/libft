@@ -3,14 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 16:56:18 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/03 17:05:48 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 13:34:57 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+*	DESCRIPTION
+*	Allocates (with malloc(3)) and returns a string representing the
+*	integer received as an argument. Negative numbers must be handled.
+*
+*	RETURN VALUES
+*	The string representing the integer. NULL if the allocation fails.
+*/
 
 static int	ft_intlen(int	n)
 {
@@ -59,6 +68,8 @@ char	*ft_itoa(int	n)
 	char	*str;
 
 	str = 0;
+	if (n < -2147483648 || n > 2147483647)
+		return (NULL);
 	if (n == -2147483648)
 		str = ft_strdup("-2147483648");
 	else if (n == 0)

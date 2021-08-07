@@ -23,9 +23,9 @@ int	main(void)
 	ret_str0 = strdup(str1);
 	ret_str1 = ft_strdup(str1);
 	if (!strcmp(str1, ret_str1) && !strcmp(ret_str0, ret_str1))
-		printf("\033[92mTest %2.i - OK \033[0m\n", 1);
+		printf("\033[92mTest %2.i - OK \033[0m\n", 2);
 	else
-		printf("\033[91mTest %2.i - KO \033[0m\n", 1);
+		printf("\033[91mTest %2.i - KO \033[0m\n", 2);
 	free(ret_str0);
 	free(ret_str1);
 	return (0);

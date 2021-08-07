@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/03 15:28:44 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/03 15:28:45 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 13:32:29 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+*	DESCRIPTION
+*	Allocates (with malloc(3)) and returns a copy of ’s1’ with the
+*	characters specified in ’set’ removed from the beginning and the end of
+*	the string.
+*
+*	RETURN VALUES
+*	Return value The trimmed string. NULL if the allocation fails.
+*/
 
 char	*ft_strtrim(char const	*s1, char const	*set)
 {

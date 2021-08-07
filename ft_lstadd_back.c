@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edpaulin <edpaulin@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: edpaulin <edpaulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 15:44:35 by edpaulin          #+#    #+#             */
-/*   Updated: 2021/08/04 16:47:16 by edpaulin         ###   ########.fr       */
+/*   Updated: 2021/08/07 14:03:59 by edpaulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+*	DESCRIPTION
+*	Adds the element ’new’ at the end of the list.
+*/
 
 void	ft_lstadd_back(t_list	**lst, t_list	*new)
 {
