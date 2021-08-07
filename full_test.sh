@@ -1,5 +1,7 @@
 #! /usr/bin/env zsh
 
+make bonus && make clean
+clear
 for i in ft*.c;do
     echo -e "==========|TEST {${i}}==========\n"
     norminette -R CheckingForbiddenSourceHeader ${i} \
