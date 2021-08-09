@@ -12,7 +12,7 @@
 
 ---
 
-<h5 align=center>This documentation is a fork of <a href=https://https://github.com/caroldaniel>@caroldaniel</a>'s original documentation. </h5>
+<h5 align=center>This documentation is a fork of <a href=https://github.com/caroldaniel>@caroldaniel</a>'s original documentation. </h5>
 <p align=center>See more <a href=https://github.com/caroldaniel/42sp-cursus-libft>here</a>.</p>
 
 ---
@@ -170,13 +170,13 @@ Usage
 Clone this repository in your local computer:
 
 ```sh
-$> git clone https://github.com/edmarpaulino/libft.git
+git clone https://github.com/edmarpaulino/libft.git
 ```
 
 In your local repository, run `make`
 
 ```sh
-$> make 
+make 
 ```
 
 > `make` suports 6 flags: 
@@ -194,9 +194,9 @@ To use the library in your code you will need to include the header:
 
 To compile the program, use your preferred compiler followed by these flags:
 ```sh
-$> path/to/main_function.c path/to/libft.a -I path/to/libft.h 
+path/to/main_function.c path/to/libft.a -I path/to/libft.h 
 ```
 To run the program, use this command:
 ```sh
-$> ./a.out 
+./a.out 
 ```
