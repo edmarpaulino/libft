@@ -102,6 +102,10 @@ Bonus
 The project
 </h2>
 
+### Header file
+
+- [`libft.h`](libft.h)	- contains all prototypes of functions and structures
+
 ### Functions from `<ctype.h>`
 
 - [`ft_isalpha`](ft_isalpha.c)	- checks  for  an  alphabetic  character
@@ -121,9 +125,9 @@ The project
 - [`ft_memmove`](ft_memmove.c)	- copy memory area
 - [`ft_strlcpy`](ft_strlcpy.c)	- copy string to an specific size
 - [`ft_strlcat`](ft_strlcat.c)	- concatenate string to an specific size
-- [`ft_strchr`](ft_strchr.c)	- locate character in string
-- [`ft_strrchr`](ft_strrchr.c)	- locate character in string
-- [`ft_strncmp`](ft_strncmp.c)	- compare two strings
+- [`ft_strchr`](ft_strchr.c)	- locate character in string (first occurrence)
+- [`ft_strrchr`](ft_strrchr.c)	- locate character in string (last occurrence)
+- [`ft_strncmp`](ft_strncmp.c)	- compare n bytes of two strings
 - [`ft_memchr`](ft_memchr.c)	- scan memory for a character
 - [`ft_memcmp`](ft_memcmp.c)	- compare memory areas
 - [`ft_strnstr`](ft_strnstr.c)	- locate a substring in a string
@@ -163,6 +167,7 @@ Usage
 </h2>
 
 ### Requirements
+
 `libft` requires *gcc* or *clang* compiler and some standard libraries.
 
 ### Instructions
